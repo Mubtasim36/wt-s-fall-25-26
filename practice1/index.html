@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Practfolio</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+         <meta name="author" content="Al Mubtasim">
+         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+         <style>
+            body{margin: 0px;                  /* margin:0px to remove gaps around the body */
+padding: 0px;}
+p{
+    margin: 0px;
+    padding: 0px;                               /* margin:0px to remove gaps around the paragraph tags of the webpage */
+    }
+    img{
+          margin: 0px;
+    padding: 0px;  
+    }
+       .home{
+                 color:rgb(255, 255, 255);     /*separating the color style for the register link using class selector(separated because otherwise the hover wont work)*/
+            
+                }
+            .home:hover{
+                   color:rgb(49, 121, 208);           /*this is how to show hover effect*/
+            }
+
+                 .reg{
+                color:rgb(73, 137, 247);        /*separating the color style for the register link using class selector(separated because otherwise the hover wont work)*/
+               
+            }
+            .reg:hover{
+                color:rgb(0, 69, 154);           /*this is how to show hover effect*/
+            }
+
+                 .signin{
+                background-color:rgb(73, 137, 247);     /*separating the color style for the register link using class selector(separated because otherwise the hover wont work)*/
+                border-radius: 10px;                      /*to round the button bg*/
+            }
+            .signin:hover{
+                background-color:rgb(22, 77, 172);          /*this is how to show hover effect*/
+            }
+
+                .Behannce:hover{
+                opacity: 70%;           <!this is how to show hover effect for opacity-->
+            }
+
+
+             .Git:link{
+                color:rgb(73, 137, 247);     <!separating the color style for the register link using class selector(separated because otherwise the hover wont work)-->
+            }
+            .Git:hover{
+                color:rgb(22, 77, 172);          <!this is how to show hover effect-->
+            }
+            .Git:visited{
+                color:rgb(128, 0, 128);          <!this is how to show visited link effect-->
+            }
+
+             .fb:link{
+                color:rgb(73, 137, 247);     <!separating the color style for the register link using class selector(separated because otherwise the hover wont work)-->
+            }
+            .fb:hover{
+                color:rgb(22, 77, 172);          <!this is how to show hover effect-->
+            }
+            .fb:visited{
+                color:rgb(128, 0, 128);          <!this is how to show visited link effect-->
+            }
+
+                       
+            .mail:hover{
+                opacity: 70%;           <!this is how to show hover effect-->
+            }
+
+       .lists{                               /* separating styles for the lists div using class selector */
+        width:100%;                          /*this is to make the div take full width*/
+        overflow: auto;
+        background-color: azure;
+        font-family:roboto;
+       }
+      .lists div{
+        width:50%;                          /*this is to make each div inside the lists div take 50% width*/   
+        float:left;                          /*this is to align the divs side by side*/
+      }
+
+
+
+            table, th, td {
+            border: 1px solid black;          /*this is how to add border to table and its elements*/
+            border-collapse: collapse;          /*this is to collapse the borders into single border*/
+          padding:10px;
+         
+          }
+          th{
+            font-family: inter;
+            font-size: 12px;
+             color:rgb(255, 255, 255);     /*to color the table header text*/
+            background-color: rgb(82, 67, 67);
+         }
+         td{
+            font-family: inter;
+            font-size: 12px;
+            text-align: center;
+         }
+
+               .fbb:hover{
+                opacity: 70%;           <!this is how to show hover effect for opacity-->
+            }
+                  .Linkedinn:hover{
+                opacity: 70%;           <!this is how to show hover effect for opacity-->
+            }
+        
+</style>
+ <link rel="icon" type="image/x-icon" href="https://amadine.com/assets/img/articles/ux-vs-ui/ux-vs-ui-design@2x.png"> <!this is how to add a favicon(icon for webpage; check name of site in the browser) to the webpage-->
+    </head>
+   
+   
+    <body>          <! used inline CSS to style elements directly within the HTML tags>       
+    <div style="display: flex; justify-content: space-between; align-items: center; padding:10px; background-color: rgb(28, 35, 35);">
+    
+    <div>
+     <h1 style="font-size:30px;font-family:Poppins; color:rgb(214, 255, 241);text-align:left;"><del><small>Konorokom</small></del>Cleanfolio</h1>     <!this is how to add multiple styles to a particular element, del is for strikethrough text, small is for smaller text size>
+      </div>
+
+
+    <div style="display:flex; justify-content: space-between;padding-right:30px; align-items: center;">    <!justify-content:center to center the links in the navbar; margin:0 auto to auto adjust the margins on left and right to center the div itself align-items:center to vertically center the items in the div-->
+         <a href="index.html" class="home" style="font-size:16px;padding:12px;font-family:Arial;"><b>Home</b></a>   <!this is to add a link in the center>
+         <a href="https://wa.me/+8801636809736/?text=URL-encodedtext" class="home" style="font-size:16px;padding:12px;font-family:Arial;text-decoration:none;">Contact Me</a>
+         <a href="https://www.linkedin.com/in/almubtasim/" class="home" style="font-size:16px;padding:12px;font-family:Arial;text-decoration:none;">About Me</a>
+    </div>
+
+
+       <div style="margin:12px; display: flex; justify-content: flex-end; align-items: center;">
+           <a href="form.html"class="reg" target="_blank" style="font-size:16px; margin-left:100px; padding:12px;font-family:Arial;text-decoration: none; ">Register</a>  <!this is how to add a link to another page in same folder--> 
+           <a href="/Login/login.html"class="signin" target="_blank" style="font-size:16px;padding:12px;font-family:Arial; color:rgb(255, 255, 255);text-decoration: none;">Login</a> <!this is how to add a link to another page in different folder-->
+   
+     </div>
+
+    </div>
+
+
+<div style="background-image: url('practice.jpg'); background-size: cover;margin:0px;padding:0px;">
+    
+            <p title="small Heading for the Site" style="color: rgb(255, 255, 255);text-align:right;font-size:32px;font-family:DM Sans;"><b>Welcome to my Webdev Practice Ground!</b></p>                                                  <!the text in title=" " appears when you hover over the element >
+            <p style="color: rgb(161, 255, 178);text-align:right;font-size:30px;font-family:Poppins;">Al Mubtasim</p>
+        <hr>      <!to add a horizontal line>                                                                                                                                                                              <!this is to add a horizontal line-->
+
+</div>
+
+
+<div style="display:flex; justify-content: center;  background-color: rgb(242, 255, 242);margin:0px;">  
+        <img src="https://img.freepik.com/premium-vector/mobile-ui-ux-concept-illustration_114360-11217.jpg" alt="Illustration JPEg" width="300" height="200" ><br>                             <!this is to show image, alt means showing text instead of img when img doesnt load>
+</div>
+        <p style="font-size:20px; font-family:cursive;text-align: center; color: rgb(8, 61, 89);background-color:rgb(242, 255, 242);margin:0px;padding-top:20px">About Me:</p>
+         <div style="display: flex; justify-content: center; background-color: rgb(242, 255, 242);color:rgb(0, 16, 30);font-size: 14px;padding:22px;">  <!this div is to center the preformatted text block and add border to it using: border:2px solid rgb(0, 16, 30); -->
+                
+            <pre>
+                                                                            <b>A 10th Semester Student </b>Studying <b><i>CSE</i></b>                                                                            <!This is a preformatted text block-(<pre).It preserves both spaces and line breaks. <b is for bold text>
+                                                                    Skilled in <b><i>UI/UX Design</i></b> and a lil bit of <b><i>Graphic Design</i></b>
+                                                                             Click links below to see my profiles &#128071;  <!--this is an emoji code-->
+                                                                   <div style="display: flex; justify-content: center;gap:55px; font-family: Poppins;background-color:rgb(242, 255, 242); ">                                                    <!div is a container element. This one is using flex to align its child elements in same row-->
+  <a href="https://www.behance.net/almubtasim" class="Behannce"><img src="https://static.vecteezy.com/system/resources/previews/065/386/497/non_2x/behance-circle-logo-icon-be-app-transparent-background-premium-social-media-design-for-digital-download-free-png.png" style="width:40px;height:40px;" title="Behance"></a>  <!this is how to add an image as a link-->
+   
+           
+        
+
+  <a href="https://github.com/Mubtasim36"class="Git" style="text-decoration: none;">Github profile</a>
+
+  <a href="https://www.facebook.com/Bhuban36/"class="fb" target="_blank" style="text-decoration: none;">Facebook profile</a>  <! target="_blank" makes the link open in a new tab, text-decoration: none; removes the underline-->
+
+  <a href="mailto:mubtasim.bhuban@gmail.com"class="mail"><img src="https://static.vecteezy.com/system/resources/previews/022/613/021/non_2x/google-mail-gmail-icon-logo-symbol-free-png.png"style="width:40px;height:40px;" title="Gmail"></a> 
+</pre>
+        </div>                          
+</div>
+
+
+<div class="lists">
+    <div>
+    
+<ul>
+    <caption><b>Skills currently learning:</b></caption>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>R</li>
+    <li>UX Research</li>
+    <li>UI Analysis</li>
+</ul>
+    </div>
+    <div></div>
+
+    <div>
+<ol>
+    <b>Majors Taken:</b>
+    <li>Intro to DS</li>
+    <li>SQT</li>
+    <li>Data Mining</li>
+    <li>HCI</li>
+    <li>MADev</li>
+</ol>
+    </div>
+</div>
+
+
+<div style="display:flex;justify-content: center;">
+<table>
+    <caption style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding:10px;">Contact Info</caption>                <!this is how to add caption to table-->
+    <tr>
+        <th>Social Media Name</th>
+        <th>Social Media Link</th>
+        <th>Other Contacts</th>
+    </tr>
+    <tr>
+        <td>LinkedIn</td>
+        <td><a href="https://www.linkedin.com/in/almubtasim/" target="_blank" style="text-decoration: none;" class="Linkedinn"><img src="linkedin.png"style="width:40px;height:40px;" alt=LinkedIn></a></td>
+        <td>Phone: +880123456789</td>
+</tr>
+  <tr>
+        <td>Facebook</td>
+        <td><a href="https://www.facebook.com/Bhuban36/" target="_blank"class="fbb" style="text-decoration: none;"><img src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg?semt=ais_hybrid&w=740&q=80"style="width:54px;height:54px;" alt=Facebook></a></td>
+        <td>Phone: +880123456789</td>
+</tr>
+
+</table>
+</div>
+    </body>
+</html>
