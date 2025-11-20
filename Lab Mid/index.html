@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 2</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Student Grade">
+        <meta name="author" content="Al Mubtasim">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Student Grade Management System</h1>
+        <p>Track and Manage Student Grades Efficiently</p>
+        <form id="FormStudent">
+            <h2>Add New Student</h2>
+            <p>Enter Student Name</p>
+            <input type="text" id="studentName" placeholder="Student Name">
+            <br>
+            <p>Enter Grade</p>
+            <input type="text" id="StudentGrade" placeholder="Grade">
+            <br>
+            <button type="button" id="AddBtn">Add Student</button>
+            <button type="button" id="ClrBtn">Clear All</button>
+
+            <h2>Statistics</h2>
+            <p>Total Students:</p>
+            <p id="StudentNum">0</p>
+            <p>Average Grade:</p>
+            <p id="Avg">0.00</p>
+            <p>Highest Grade:</p>
+            <p id="HGrade">0</p>
+            <p>Lowest Grade:</p>
+            <p id="LGrade">0</p>
+            <p>Pass Rate:</p>
+            <p id="PRate">0.00%</p>
+
+            <h2>Student List</h2>
+            <ul id="studentList">
+                <li>No Data Found</li>
+            </ul>
+        </form>
+
+        <script>
+            let students = [];
+
+            document.getElementById('AddBtn').addEventListener('click', function() {
+                const name = document.getElementById('studentName').value.trim();
+                const grade = parseInt(document.getElementById('StudentGrade').value);
+
+                if (name.length === 0) {
+                    alert("Student Name Cannot Be Empty");
+                    return;
+                }
+                if (isNaN(grade) || grade < 0 || grade > 100) {
+                    alert("Grade must be a number between 0 and 100");
+                    return;
+                }
+
+                students.push({ name, grade, originalGrade: grade });
+
+                updateStudentList();
+                updateStatistics();
+
+                document.getElementById('studentName').value = '';
+                document.getElementById('StudentGrade').value = '';
+            });
+
+            document.getElementById('ClrBtn').addEventListener('click', function() {
+                students = [];
+                updateStudentList();
+                updateStatistics();
+            });
+
+            function updateStudentList() {
+                const list = document.getElementById('studentList');
+                list.innerHTML = '';
+
+                if (students.length === 0) {
+                    list.innerHTML = '<li>No Data Found</li>';
+                } else {
+                    for (let i = 0; i < students.length; i++) {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${students[i].name}: ${students[i].grade}`;
+                        list.appendChild(listItem);
+                    }
+                }
+            }
+
+            function updateStatistics() {
+                const totalStudents = students.length;
+                let totalGrade = 0;
+                let highestGrade = 0;
+                let lowestGrade = 100;
+                let passCount = 0;
+
+                for (let i = 0; i < totalStudents; i++) {
+                    const grade = students[i].grade;
+                    totalGrade += grade;
+
+                    if (grade > highestGrade) {
+                        highestGrade = grade;
+                    }
+
+                    if (grade < lowestGrade) {
+                        lowestGrade = grade;
+                    }
+
+                    if (grade >= 50) {
+                        passCount++;
+                    }
+                }
+
+                const avgGrade = totalStudents > 0 ? (totalGrade / totalStudents).toFixed(2) : 0;
+                const passRate = totalStudents > 0 ? ((passCount / totalStudents) * 100).toFixed(2) : 0;
+
+                document.getElementById('StudentNum').textContent = totalStudents;
+                document.getElementById('Avg').textContent = avgGrade;
+                document.getElementById('HGrade').textContent = highestGrade;
+                document.getElementById('LGrade').textContent = lowestGrade;
+                document.getElementById('PRate').textContent = passRate + '%';
+            }
+        </script>
+    </body>
+</html>
